@@ -62,17 +62,61 @@ app.get('/login', keycloak.protect(), (req, res) => {
     return res.redirect('home');
 });
 
-app.get('/asset01', keycloak.enforcer(['asset-01:read'], {
-    resource_server_id: 'GestionFormation'
+app.get('/UE1/', keycloak.enforcer(['UE1:lire'], {
+    resource_server_id: 'appli-node'
 }), (req, res) => {
     return res.status(200).end('success');
 });
 
-app.get('/asset01/update', keycloak.enforcer(['asset-01:write'], {
-    resource_server_id: 'GestionFormation'
+app.get('/UE1/ecrire', keycloak.enforcer(['UE1:ecrire'], {
+    resource_server_id: 'appli-node'
 }), (req, res) => {
     return res.status(200).end('success');
 });
+
+app.get('/UE1/valider', keycloak.enforcer(['UE1:valider'], {
+    resource_server_id: 'appli-node'
+}), (req, res) => {
+    return res.status(200).end('success');
+});
+
+app.get('/UE2/', keycloak.enforcer(['UE2:lire'], {
+    resource_server_id: 'appli-node'
+}), (req, res) => {
+    return res.status(200).end('success');
+});
+
+app.get('/UE2/ecrire', keycloak.enforcer(['UE2:ecrire'], {
+    resource_server_id: 'appli-node'
+}), (req, res) => {
+    return res.status(200).end('success');
+});
+
+app.get('/UE2/valider', keycloak.enforcer(['UE2:valider'], {
+    resource_server_id: 'appli-node'
+}), (req, res) => {
+    return res.status(200).end('success');
+});
+
+app.get('/UE3/', keycloak.enforcer(['UE3:lire'], {
+    resource_server_id: 'appli-node'
+}), (req, res) => {
+    return res.status(200).end('success');
+});
+
+app.get('/UE3/ecrire', keycloak.enforcer(['UE3:ecrire'], {
+    resource_server_id: 'appli-node'
+}), (req, res) => {
+    return res.status(200).end('success');
+});
+
+app.get('/UE3/valider', keycloak.enforcer(['UE3:valider'], {
+    resource_server_id: 'appli-node'
+}), (req, res) => {
+    return res.status(200).end('success');
+});
+
+
 
 app.use((req, res, next) => {
     return res.status(404).end('Not Found');

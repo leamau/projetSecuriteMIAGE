@@ -1,11 +1,11 @@
 {
-  "realm": "my-product",
-  "auth-server-url": "http://127.0.0.1:8080/auth/",
+  "realm": "Universite",
+  "auth-server-url": "http://console.keycloak.vivalx.com/auth/",
   "ssl-required": "external",
-  "resource": "myApplication",
+  "resource": "appli-node",
   "verify-token-audience": true,
   "credentials": {
-    "secret": "a904d76f-1095-45fa-8243-0878575eb447"
+    "secret": "a15bee0b-ed2f-4203-b48d-6905e4dc8dc2"
   },
   "confidential-port": 0,
   "policy-enforcer": {}
