@@ -62,56 +62,56 @@ app.get('/login', keycloak.protect(), (req, res) => {
     return res.redirect('home');
 });
 
-app.get('/UE1/', keycloak.enforcer(['UE1:lire'], {
-    resource_server_id: 'appli-node'
+app.get('/UE1/', keycloak.enforcer(['UE1:read'], {
+    resource_server_id: 'app-universite'
 }), (req, res) => {
     return res.status(200).end('success');
 });
 
-app.get('/UE1/ecrire', keycloak.enforcer(['UE1:ecrire'], {
-    resource_server_id: 'appli-node'
+app.get('/UE1/ecrire', keycloak.enforcer(['UE1:write'], {
+    resource_server_id: 'app-universite'
 }), (req, res) => {
     return res.status(200).end('success');
 });
 
-app.get('/UE1/valider', keycloak.enforcer(['UE1:valider'], {
-    resource_server_id: 'appli-node'
+app.get('/UE1/valider', keycloak.enforcer(['UE1:validate'], {
+    resource_server_id: 'app-universite'
 }), (req, res) => {
     return res.status(200).end('success');
 });
 
-app.get('/UE2/', keycloak.enforcer(['UE2:lire'], {
-    resource_server_id: 'appli-node'
+app.get('/UE2/', keycloak.enforcer(['UE2:read'], {
+    resource_server_id: 'app-universite'
 }), (req, res) => {
     return res.status(200).end('success');
 });
 
-app.get('/UE2/ecrire', keycloak.enforcer(['UE2:ecrire'], {
-    resource_server_id: 'appli-node'
+app.get('/UE2/ecrire', keycloak.enforcer(['UE2:write'], {
+    resource_server_id: 'app-universite'
 }), (req, res) => {
     return res.status(200).end('success');
 });
 
-app.get('/UE2/valider', keycloak.enforcer(['UE2:valider'], {
-    resource_server_id: 'appli-node'
+app.get('/UE2/valider', keycloak.enforcer(['UE2:validate'], {
+    resource_server_id: 'app-universite'
 }), (req, res) => {
     return res.status(200).end('success');
 });
 
-app.get('/UE3/', keycloak.enforcer(['UE3:lire'], {
-    resource_server_id: 'appli-node'
+app.get('/UE3/', keycloak.enforcer(['UE3:read'], {
+    resource_server_id: 'app-universite'
 }), (req, res) => {
     return res.status(200).end('success');
 });
 
-app.get('/UE3/ecrire', keycloak.enforcer(['UE3:ecrire'], {
-    resource_server_id: 'appli-node'
+app.get('/UE3/ecrire', keycloak.enforcer(['UE3:write'], {
+    resource_server_id: 'app-universite'
 }), (req, res) => {
     return res.status(200).end('success');
 });
 
-app.get('/UE3/valider', keycloak.enforcer(['UE3:valider'], {
-    resource_server_id: 'appli-node'
+app.get('/UE3/valider', keycloak.enforcer(['UE3:validate'], {
+    resource_server_id: 'app-universite'
 }), (req, res) => {
     return res.status(200).end('success');
 });
